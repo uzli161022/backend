@@ -3,6 +3,11 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 const cors = require('cors');
 
+app.use(cors({
+  origin: 'https://frontend-xi-six-52.vercel.app/', // ganti sesuai URL Vercel
+  credentials: true
+}));
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
